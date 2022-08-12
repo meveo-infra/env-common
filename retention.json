@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LifecycleConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+        <Rule>
+                <Expiration>
+                        <Days>1</Days>
+                </Expiration>
+                <ID>Retention</ID>
+                <Filter>
+                        <Prefix/>
+                        <And>
+                                <Prefix>{{SERVER_NAME}}</Prefix>
+                        </And>
+                </Filter>
+                <Status>Enabled</Status>
+        </Rule>
+</LifecycleConfiguration>
